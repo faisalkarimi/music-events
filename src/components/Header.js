@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./styles/Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignInAlt, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import Search from "./Search";
 
 const Header = ({ user, logout }) => {
   return (
@@ -13,7 +14,7 @@ const Header = ({ user, logout }) => {
         </Link>
       </div>
 
-      <input type="text" placeholder="Search..." />
+      <Search />
 
       <nav>
         <ul>

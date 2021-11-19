@@ -20,8 +20,8 @@ const EventItem = ({ evt }) => {
       </div>
 
       <div className="link">
-        <Link to={`/events/${evt.slug}`}>
-          <a className="btn">Details</a>
+        <Link to={`/${evt.slug}`} className="btn">
+          Details
         </Link>
       </div>
     </div>
