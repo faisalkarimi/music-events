@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
@@ -8,10 +9,14 @@ import HomePage from "./screens/HomePage";
 import Footer from "./components/Footer";
 
 function App() {
+  const [user, setUser] = useState(null);
+  const logout = () => {
+    setUser(null);
+  };
   return (
     <>
       <BrowserRouter>
-        <Header user="faisal" />
+        <Header user="faisal" onLogout={logout} />
         <Routes>
           <Route path="/event-name" element={<EventDetails />} />
           <Route path="/events" element={<EventDetails />} />

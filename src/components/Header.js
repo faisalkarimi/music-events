@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignInAlt, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import Search from "./Search";
 
-const Header = ({ user, logout }) => {
+const Header = ({ user, onLogout }) => {
   return (
     <header className="header">
       <div className="logo">
@@ -38,7 +38,7 @@ const Header = ({ user, logout }) => {
               </li>
               <li>
                 <button
-                  onClick={() => logout()}
+                  onClick={() => onLogout()}
                   className="btn-secondary btn-icon"
                 >
                   <FontAwesomeIcon icon={faSignOutAlt} /> Logout
